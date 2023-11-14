@@ -96,6 +96,16 @@ def squareSum(numbers):
 	#since you can one line
 	return sum 
 
+def numString(input):
+	return str(input)
+
+#print(numString(5999595493))
+
+def invertNum(input):
+	return -1*input
+#print(invertNum(-43.24243))
+
+
 
 """
 INFORMATION ABOUT CLASSES
