@@ -4,6 +4,9 @@ definitely a way to change that but i am not sure yet.
 
 """
 
+#BTW THE WAY TO BULK FOLD STUFF IS CTRL SHIFT [ TO OPEN AND CTRL SHIFT ] TO CLOSE
+#LEARNING MATERIAL
+
 #using this as filler will do more with later...
 def main():
 	list()
@@ -71,7 +74,47 @@ def sortingTake1():
 	print(sorted(randList))
 
 
-sortingTake1()
+#sortingTake1()
 
 
-	
+#
+"""
+all codewars code goes here... 
+
+"""
+
+
+def squareSum(numbers):
+	#function takes all inputs and returns the sum of the squares of those numbers
+	sum = 0
+	for i in numbers:
+		sum += i**2
+
+	#an alternate version instead of adding it yourself is using the sum() function
+	#so instead of having multiple lines, you can do 
+	#return sum(i ** 2 for i in numbers) to do the same thing
+	#since you can one line
+	return sum 
+
+
+"""
+INFORMATION ABOUT CLASSES
+"""
+class tester:
+	#initialization operation, makes it empty, like a reset maybe?
+	#so that you can have multiple instances of this class working serperately maybe?
+	def __init__(self):
+		self.emptyList = []
+		#you can add anything in here I imagine you can add more complex logic and other 
+		#functions that would be unique to the tester class and not work unless looking in
+		#here.
+		pass
+	def fnTest(self,a, b):
+		return a+b
+
+# #making a new class object
+# x = tester()
+# #calling one of the variables in the class, and you can call any of them.
+# x.emptyList.append(5)
+# print(x.fnTest(5,6))
+# print(x.emptyList)
