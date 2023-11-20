@@ -106,6 +106,155 @@ def invertNum(input):
 #print(invertNum(-43.24243))
 
 
+#this method just prints in the function without returning anything
+def banjoPlaying(input):
+	if(input[0].upper()	== 'R'):
+		print(input, "plays banjo")
+	else:
+		print(input, "does not play banjo")
+	return
+
+#this method returns a longer string which is kinda weird
+def banjoPlayingAlt(input):
+	if(input[0].upper() == 'R'):
+		return input + " plays banjo"
+	else:
+		return input + " does not play banjo"
+
+#print(banjoPlayingAlt("Robert"))
+#banjoPlaying("Xenon")
+
+def countByX(count,amount):
+
+	#you can oneline this by just returning thetemp list instead of initializing it...
+	#like this:
+	# return [(i+1)*count for i in range(amount)]
+	#and it works.
+	temp = [(i+1)*count for i in range(amount)]
+	return temp
+#print(countByX(3,10))
+
+def loveFunc(flower1, flower2):
+	#easier way that is shortcutting the logic
+	#return flower1%2 != flower2%2
+	return(True if(flower1%2 != flower2%2) else False)
+#print(loveFunc(2,4))
+
+
+def needleInHaystack(input):
+	return "found the needle at position " + str(input.index('needle'))
+	#index searches each index of the list and returns the position of what ur
+	#searching for
+	for i in range(len(input)):
+		if(input[i] == 'needle'):
+			return "found the needle at position " + str(i)
+
+#print(needleInHaystack([2,3,4,5,6,7,8,8,7,5,4,3,4,5,6,67,5,5,3,3,4,2,34,234,23,4,234,324,324,'needle',1,2,3,4,5,5,6,5,4,32,3,45,54]))
+#the [::-1] is saying, start at the back
+def reverseString(input):
+	return input[::-1]
+#print(reverseString("whatever"))
+
+def reverseAndMirror(input1, input2):
+	input1 = input2[::-1] + "@@@" + input1[::-1] + input1
+	#swapcase inverse the case, so Water becomes wATER
+	return input1.swapcase()
+#print(reverseAndMirror("Water", "Fish")) 
+
+def max(input):
+	temp = input[0]
+	for i in range(1, len(input), 1):
+		if(temp < input[i]) :
+			temp = input[i]
+	return temp
+
+def min(input):
+	temp = input[0]
+	for i in range(1, len(input), 1):
+		if(temp > input[i]):
+			temp = input[i]
+	return temp
+#there are fucking min() and max() functions that will find the max and min values
+#of a list fuck me...
+#print(max([12,1,2,3,4,5,132]))
+#print(min([1,2,3,4,-132112, 0, -32]))
+
+#iterating thru for loop another way:
+
+temp =[0,1,2,3,4,2,33,321,-232]
+test = temp[0]
+#this starts at the second index of the temp list and continues on, apparently.
+for i in temp[1:]:
+	if i > test:
+		test = i
+#print(test)
+
+def removeChar(s):
+	#when given a string, remove all of a specific char from it
+	temp = ""
+	for i in s:
+		if i == '!':
+			pass
+		else:
+			temp += i
+
+
+	#another way to do it... 
+	#return s.replace('!','')
+	#that just searches the entire string for the chars in first input, and
+	#replaces them with the char in the second input
+	return temp
+#print(removeChar("Hello! World!"))
+
+def repeatingStr(num, string):
+	return string * num
+#print(repeatingStr(3,"what"))
+
+def feast(beast, dish):
+	return beast[0] == dish[0] and beast [-1] == dish[-1] 
+#print(feast("chickadee", "chocolate cakd"))
+
+def strToNum(s):
+	return int(s)
+print(strToNum("-743"))
+
+#triangle inequality theorem... 
+def isTriangle(a,b,c):
+	return a+b > c and a+c > b and b+c >a
+#print(isTriangle(4,2,3))
+
+def countPosSumNeg(arr):
+	temp = [0,0]
+	if not arr:
+		return temp.clear()
+	for i in arr:
+		if i > 0:
+			temp[0]+=1
+		else:
+			temp[1]+=i
+	return temp
+def posNegAlt(arr):
+	pos = sum(1 for x in arr if x > 0)
+	neg = sum(i for i in arr if i < 0)
+	return [pos, neg] if len(arr) else []
+#print(posNegAlt([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+#print(countPosSumNeg([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, -11, -12, -13, -14, -15]))
+
+def growing(arr):
+	temp = 1
+	for i in arr:
+		temp*=i
+	return temp
+	
+print(growing([1,2,3,4,5,0]))
+
+#there is a multiplication function in math that multiplies everything together...
+#math.prod(input list i think)
+
+
+
+
+
 
 """
 INFORMATION ABOUT CLASSES
